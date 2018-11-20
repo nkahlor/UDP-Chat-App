@@ -32,6 +32,10 @@ const struct sockaddr_in &User::getAddress() const {
     return address;
 }
 
+const time_t &User::getLastMesgTime() const {
+    return last_message_time;
+}
+
 void User::setToken(const std::string &token) {
     User::token = token;
 }
@@ -46,4 +50,8 @@ void User::setPort(const std::string &port) {
 
 void User::setAddress(const struct sockaddr_in addr) {
     User::address = addr;
+}
+
+void User::renewSession() {
+    last_message_time = time(NULL);
 }

@@ -6,9 +6,12 @@
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <pthread.h>
 
 #include "user.h"
 #include "../portal.h"
+
+#define TIMEOUT_LEN 300 // seconds
 
 class ServerPortal : public Portal {
 private:
@@ -19,6 +22,9 @@ private:
     std::map<std::string, User> logged_in;
     std::ofstream logfile;  // maintains every message sent
 
+    // Log inactive users out every 5 minutes periodically
+    pthread_t timeout;
+
     CMD _get_cmd(std::string mesg);
     bool _log_user_in(std::string mesg);
     bool _log_user_out(std::string mesg);;
@@ -28,6 +34,7 @@ private:
     std::string _generate_msg_id();
     bool _route_message(std::string mesg);
     bool _send_message_to_usr(std::string mesg, User usr);
+
 
 public:
     ServerPortal();

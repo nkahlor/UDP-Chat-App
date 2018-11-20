@@ -43,6 +43,8 @@ iostream
 -
 stdexcept
 -
+pthread.h
+-
 user.h
 /Users/nickkahlor/CLionProjects/Client-Server Chat/server/user.h
 ../portal.h

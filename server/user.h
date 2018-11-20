@@ -21,6 +21,7 @@ private:
     std::string token;
     std::string ip;
     std::string port;
+    time_t last_message_time;
     struct sockaddr_in address;
 
 public:
@@ -31,11 +32,13 @@ public:
     const std::string &getToken() const;
     const std::string &getIp() const;
     const std::string &getPort() const;
+    const time_t &getLastMesgTime() const;
     const struct sockaddr_in &getAddress() const;
     void setToken(const std::string &token);
     void setIp(const std::string &ip);
     void setPort(const std::string &port);
     void setAddress(const struct sockaddr_in addr);
+    void renewSession();
 };
 
 

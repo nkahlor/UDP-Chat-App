@@ -24,10 +24,6 @@ int main() {
     std::cin >> user;
     std::cout << "Enter your password\n>> ";
     std::cin >> pass;
-    std::cout << "Enter your IP\n>> ";
-    std::cin >> ip;
-    std::cout << "Enter your Port\n>> ";
-    std::cin >> port;
     client.loginToServer(user, pass , ip, port);
 
     // Continually accept messages from the server

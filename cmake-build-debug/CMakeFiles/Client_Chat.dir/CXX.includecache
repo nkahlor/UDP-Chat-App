@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/nickkahlor/CLionProjects/Client-Server Chat/client/udp_client_portal.cc
+/Users/nickkahlor/CLionProjects/Client-Server Chat/client/client_main.cc
+iostream
+-
+pthread.h
+-
 udp_client_portal.h
 /Users/nickkahlor/CLionProjects/Client-Server Chat/client/udp_client_portal.h
 

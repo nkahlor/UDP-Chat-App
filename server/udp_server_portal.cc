@@ -1,5 +1,8 @@
 #include "udp_server_portal.h"
 
+// Timeout thread task body
+void* __disconnect_inactive_users(void*);
+
 ServerPortal::ServerPortal() : Portal() {
     // Open the Server's connection
     sockfd = socket(AF_INET, SOCK_DGRAM, 0);
@@ -14,6 +17,11 @@ ServerPortal::ServerPortal() : Portal() {
         host_addr.sin_family = AF_INET;
         host_addr.sin_addr.s_addr = htonl(INADDR_ANY);
         host_addr.sin_port = htons(32000);
+
+        struct timeval tv;
+        tv.tv_sec = 5; // Wait no more than 5s for any single message
+        tv.tv_usec = 0;
+        setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (const char*)&tv, sizeof tv);
 
         bind(sockfd,
              (struct sockaddr *) &host_addr,
@@ -32,6 +40,9 @@ ServerPortal::ServerPortal() : Portal() {
 
     // Initialize the output file to store messages
     logfile = std::ofstream("server/archive.log");
+
+    // Initialize timeout thread
+    pthread_create(&timeout, nullptr, __disconnect_inactive_users, &logged_in);
 }
 
 void ServerPortal::parseMessage(const std::string mesg) {
@@ -95,18 +106,21 @@ bool ServerPortal::_log_user_in(std::string mesg) {
                 users[i].setPort(port);
                 users[i].setToken(_generate_token());
                 users[i].setAddress(remote_addr); // Current remote address is whoever sent the login request
+                users[i].renewSession();
                 logged_in[username] = users[i];
                 sendMessageRaw(users[i].getToken());
                 break;
             }
             else {
                 sendMessageRaw("Error: password doesn't match");
+                return false;
             }
-            break;
         }
     }
     if(!validUser)
         sendMessageRaw("Error: Unregistered username");
+    else
+        sendMessageRaw("Success: Logged in");
     return validUser;
 }
 
@@ -155,6 +169,10 @@ bool ServerPortal::_route_message(std::string mesg) {
         return false;
     }
 
+    if(logged_in.count(sender) > 0) {
+        logged_in[sender].renewSession();
+    }
+
     // Verify the sender's Token
     if(!_valid_token(tok)) {
         sendMessageRaw("Error: Could not authenticate sender, message not sent");
@@ -164,25 +182,25 @@ bool ServerPortal::_route_message(std::string mesg) {
     // Find the IP and Port of the destination
     std::string ip;
     std::string port;
-    bool valid_dest = false;
-    for(const User& u : users) {
-        if(u.getUsername() == dest) {
-            ip = u.getIp();
-            port = u.getPort();
-            valid_dest = true;
-            break;
-        }
-    }
+    bool valid_dest = logged_in.count(dest) > 0;
     if(!valid_dest) {
-        sendMessageRaw("Error: Invalid destination");
+        sendMessageRaw("Error: Sending failed, user not logged in");
         return false;
     }
 
+    std::string full_mesg = sender + "->" + dest + "#<" + logged_in[dest].getToken() + ">" + sender + ": " + message;
     // Send the message if the user is logged in
-    if(logged_in.count(dest) > 0 && !_send_message_to_usr(message, logged_in[dest])) {
+    if(!_send_message_to_usr(full_mesg, logged_in[dest])) {
         sendMessageRaw("Error: Message failed to send");
         return false;
     }
+    // Let the sender know it was successfully sent
+    std::string echo = "server->" + sender + "# "+
+                        "<" + logged_in[sender].getToken() + ">" + "<" + msg_id + ">" +
+                        "Success: " + message;
+
+    remote_addr = logged_in[sender].getAddress();
+    sendMessageRaw(echo);
     // Store the message and messageID
     logfile << "[" << msg_id << "]" << sender << "->" << dest << ": " << message << "\n";
     logfile.flush();
@@ -199,10 +217,18 @@ bool ServerPortal::_send_message_to_usr(std::string mesg, User usr) {
 // TODO: Ensure no duplicate tokens in the program are created, it's not likely but it is possible
 std::string ServerPortal::_generate_token() {
     const int TOKEN_LEN = 6;
-    std::string token = "";
+    std::string token;
     for(int i = 0; i < TOKEN_LEN; i++)
         token += _generate_char();
     return token;
+}
+
+std::string ServerPortal::_generate_msg_id() {
+    const int ID_LEN = 10;
+    std::string id;
+    for(int i = 0; i < ID_LEN; i++)
+        id += _generate_char();
+    return id;
 }
 
 bool ServerPortal::_valid_token(std::string tok) {
@@ -210,7 +236,7 @@ bool ServerPortal::_valid_token(std::string tok) {
         if(u.getToken().find(tok) != std::string::npos) // if the token is found in any user, return true
             return true;
     }
-    // if we never found the toke, it must be invalid
+    // if we never found the token, it must be invalid
     return false;
 }
 
@@ -218,4 +244,23 @@ char ServerPortal::_generate_char() {
     //srand((unsigned int)time(nullptr));
     auto random_char = (unsigned char)(rand() % (126 - 33 + 1) + 33);
     return static_cast<char>(random_char);
+}
+
+// TODO: Send a message to the user you're booting
+void* __disconnect_inactive_users(void* data) {
+    std::map<std::string, User>* logged_in = (std::map<std::string, User>*) data;
+    while(true) {
+        sleep(TIMEOUT_LEN); // Periodically awake every 5 minutes
+        time_t current_time = time(nullptr);
+        for(auto itr = logged_in->begin(); itr != logged_in->end(); itr++) {
+            if(current_time - itr->second.getLastMesgTime() >= TIMEOUT_LEN) {
+                std::cout << itr->second.getUsername() + " logged out due to inactivity\n";
+
+                logged_in->erase(itr->second.getUsername());
+                // Don't try to increment the iterator if this operation emptied the map
+                if(logged_in->empty())
+                    break;
+            }
+        }
+    }
 }
