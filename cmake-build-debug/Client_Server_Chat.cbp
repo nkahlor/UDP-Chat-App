@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Client_Server_Chat"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Client_Chat">
+				<Option output="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/Client_Chat" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 Client_Chat"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Client_Chat/fast">
+				<Option output="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/Client_Chat" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 Client_Chat/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Server_Chat">
+				<Option output="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/Server_Chat" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 Server_Chat"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Server_Chat/fast">
+				<Option output="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/Server_Chat" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 Server_Chat/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nickkahlor/CLionProjects/Client-Server\ Chat/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/nickkahlor/CLionProjects/Client-Server Chat/client/client_main.cc">
+			<Option target="Client_Chat"/>
+		</Unit>
+		<Unit filename="/Users/nickkahlor/CLionProjects/Client-Server Chat/client/udp_client_portal.cc">
+			<Option target="Client_Chat"/>
+		</Unit>
+		<Unit filename="/Users/nickkahlor/CLionProjects/Client-Server Chat/client/udp_client_portal.h">
+			<Option target="Client_Chat"/>
+		</Unit>
+		<Unit filename="/Users/nickkahlor/CLionProjects/Client-Server Chat/portal.cc">
+			<Option target="Client_Chat"/>
+			<Option target="Server_Chat"/>
+		</Unit>
+		<Unit filename="/Users/nickkahlor/CLionProjects/Client-Server Chat/portal.h">
+			<Option target="Client_Chat"/>
+			<Option target="Server_Chat"/>
+		</Unit>
+		<Unit filename="/Users/nickkahlor/CLionProjects/Client-Server Chat/server/server_main.cc">
+			<Option target="Server_Chat"/>
+		</Unit>
+		<Unit filename="/Users/nickkahlor/CLionProjects/Client-Server Chat/server/udp_server_portal.cc">
+			<Option target="Server_Chat"/>
+		</Unit>
+		<Unit filename="/Users/nickkahlor/CLionProjects/Client-Server Chat/server/udp_server_portal.h">
+			<Option target="Server_Chat"/>
+		</Unit>
+		<Unit filename="/Users/nickkahlor/CLionProjects/Client-Server Chat/server/user.cc">
+			<Option target="Server_Chat"/>
+		</Unit>
+		<Unit filename="/Users/nickkahlor/CLionProjects/Client-Server Chat/server/user.h">
+			<Option target="Server_Chat"/>
+		</Unit>
+		<Unit filename="/Users/nickkahlor/CLionProjects/Client-Server Chat/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

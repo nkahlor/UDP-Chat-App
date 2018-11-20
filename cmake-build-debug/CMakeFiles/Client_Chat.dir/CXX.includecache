@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/nickkahlor/CLionProjects/Client-Server Chat/client/udp_client_portal.cc
+udp_client_portal.h
+/Users/nickkahlor/CLionProjects/Client-Server Chat/client/udp_client_portal.h
+
+/Users/nickkahlor/CLionProjects/Client-Server Chat/client/udp_client_portal.h
+iostream
+-
+../portal.h
+/Users/nickkahlor/CLionProjects/Client-Server Chat/portal.h
+
+/Users/nickkahlor/CLionProjects/Client-Server Chat/portal.h
+string
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+errno.h
+-
+unistd.h
+-
+csignal
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+
