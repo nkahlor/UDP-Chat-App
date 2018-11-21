@@ -1,52 +1,37 @@
 #include <iostream>
 #include <pthread.h>
 
-#include "udp_client_portal.h"
-
-ClientPortal client;
+#include "gui.h"
 
 pthread_t receiver;
+ClientPortal client;
 void *receive_messages(void*);
 
-// Exit gracefully
-void sighandler(int sig_num)
-{
-    client.close();
-    exit(0);
-}
+int main(int argc, char* argv[]) {
+    QApplication app(argc, argv);
+    Layout window(nullptr, &client);
+    LoginDialog login(nullptr, &client);
 
-int main() {
-    std::string message;
-    std::string user, pass, ip, port;
+    window.resize(800, 400);
+    window.setWindowTitle("Chat Client");
+    window.show();
 
-    // Attempt to log the user into the server
-    std::cout << "Enter your username\n>> ";
-    std::cin >> user;
-    std::cout << "Enter your password\n>> ";
-    std::cin >> pass;
-    client.loginToServer(user, pass , ip, port);
+    login.resize(400, 150);
+    login.setWindowTitle("Login To Server");
+    login.setModal(true);
+    login.show();
 
     // Continually accept messages from the server
-    pthread_create(&receiver, nullptr, receive_messages, nullptr);
+    pthread_create(&receiver, nullptr, receive_messages, &window);
 
-    signal(SIGTSTP, sighandler);
-    while(true) {
-        std::string dest;
-        std::cout << "Who do you want to message?\n>> ";
-        std::cin >> dest;
-        std::cout << "Enter the message body: \n>> ";
-        // Eat the newline
-        std::getline(std::cin, message);
-        // Get the actual message
-        std::getline(std::cin, message);
-        client.sendMessage(message, dest);
-    }
-
-    return 0;
+    return app.exec();
 }
 
-void *receive_messages(void*) {
+void *receive_messages(void* data) {
+    Layout* window = (Layout*) data;
     while(true) {
-        std::cout << client.receiveMessageRaw() << std::endl;
+        QString new_message = QString::fromStdString(client.receiveMessageRaw());
+        QListWidget* list = window->chat_tabs[window->tabs->currentIndex()]->messages;
+        list->addItem(new_message);
     }
 }

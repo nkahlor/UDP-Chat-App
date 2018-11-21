@@ -36,6 +36,11 @@ void ClientPortal::sendMessage(std::string content, std::string dest) {
     sendMessageRaw(message);
 }
 
+void ClientPortal::logoutOfServer() {
+    std::string message = this->user + "->server#" + "logout" + "<" + this->token + ">";
+    sendMessageRaw(message);
+}
+
 std::string ClientPortal::_generate_msg_id() {
     const int ID_LEN = 10;
     std::string id = "";
