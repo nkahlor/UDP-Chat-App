@@ -16,6 +16,13 @@ ClientPortal::ClientPortal() {
     host_addr.sin_port = htons(32000);
 }
 
+ClientPortal* ClientPortal::__instance = nullptr;
+ClientPortal* ClientPortal::getInstance() {
+    if(__instance == nullptr)
+        __instance = new ClientPortal();
+    return __instance;
+}
+
 bool ClientPortal::loginToServer(std::string user, std::string pass, std::string ip, std::string port) {
     std::string login_request = user + "->server#login" + "<" + pass + ">" + "<" + ip + ">" + "<" + port + ">";
     sendMessageRaw(login_request);
@@ -32,12 +39,12 @@ bool ClientPortal::loginToServer(std::string user, std::string pass, std::string
 }
 
 void ClientPortal::sendMessage(std::string content, std::string dest) {
-    std::string message = this->user + "->" + dest + "#" + "<" + this->token + ">" + "<" + _generate_msg_id() + ">" + content;
+    std::string message = user + "->" + dest + "#" + "<" + token + ">" + "<" + _generate_msg_id() + ">" + content;
     sendMessageRaw(message);
 }
 
 void ClientPortal::logoutOfServer() {
-    std::string message = this->user + "->server#" + "logout" + "<" + this->token + ">";
+    std::string message = user + "->server#" + "logoff" + "<" + token + ">";
     sendMessageRaw(message);
 }
 

@@ -2,3 +2,5 @@
 /Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles/Client_Chat.dir
 /Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles/Server_Chat.dir
+/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles/Client_Chat_autogen.dir
+/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles/Server_Chat_autogen.dir

@@ -119,8 +119,7 @@ bool ServerPortal::_log_user_in(std::string mesg) {
     }
     if(!validUser)
         sendMessageRaw("Error: Unregistered username");
-    else
-        sendMessageRaw("Success: Logged in");
+
     return validUser;
 }
 
@@ -164,8 +163,8 @@ bool ServerPortal::_route_message(std::string mesg) {
         msg_id = mesg.substr(begin_msg_id, end_msg_id - begin_msg_id);
         message = mesg.substr(begin_msg, end_msg - begin_msg);
     } catch(const std::out_of_range& e) {
-        std::cerr << "Out of range error: " << e.what() << std::endl;
-        sendMessageRaw("Error: Incorrect message format");
+        //std::cerr << "Out of range error: " << e.what() << std::endl;
+        //sendMessageRaw("Error: Incorrect message format");
         return false;
     }
 

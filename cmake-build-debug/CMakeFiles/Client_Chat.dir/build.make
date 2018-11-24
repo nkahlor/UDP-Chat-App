@@ -96,11 +96,39 @@ CMakeFiles/Client_Chat.dir/portal.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client_Chat.dir/portal.cc.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/nickkahlor/CLionProjects/Client-Server Chat/portal.cc" -o CMakeFiles/Client_Chat.dir/portal.cc.s
 
+CMakeFiles/Client_Chat.dir/client/gui.cc.o: CMakeFiles/Client_Chat.dir/flags.make
+CMakeFiles/Client_Chat.dir/client/gui.cc.o: ../client/gui.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Client_Chat.dir/client/gui.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client_Chat.dir/client/gui.cc.o -c "/Users/nickkahlor/CLionProjects/Client-Server Chat/client/gui.cc"
+
+CMakeFiles/Client_Chat.dir/client/gui.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client_Chat.dir/client/gui.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/nickkahlor/CLionProjects/Client-Server Chat/client/gui.cc" > CMakeFiles/Client_Chat.dir/client/gui.cc.i
+
+CMakeFiles/Client_Chat.dir/client/gui.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client_Chat.dir/client/gui.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/nickkahlor/CLionProjects/Client-Server Chat/client/gui.cc" -o CMakeFiles/Client_Chat.dir/client/gui.cc.s
+
+CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o: CMakeFiles/Client_Chat.dir/flags.make
+CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o: Client_Chat_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o -c "/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/Client_Chat_autogen/mocs_compilation.cpp"
+
+CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/Client_Chat_autogen/mocs_compilation.cpp" > CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/Client_Chat_autogen/mocs_compilation.cpp" -o CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.s
+
 # Object files for target Client_Chat
 Client_Chat_OBJECTS = \
 "CMakeFiles/Client_Chat.dir/client/udp_client_portal.cc.o" \
 "CMakeFiles/Client_Chat.dir/client/client_main.cc.o" \
-"CMakeFiles/Client_Chat.dir/portal.cc.o"
+"CMakeFiles/Client_Chat.dir/portal.cc.o" \
+"CMakeFiles/Client_Chat.dir/client/gui.cc.o" \
+"CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o"
 
 # External object files for target Client_Chat
 Client_Chat_EXTERNAL_OBJECTS =
@@ -108,9 +136,14 @@ Client_Chat_EXTERNAL_OBJECTS =
 Client_Chat: CMakeFiles/Client_Chat.dir/client/udp_client_portal.cc.o
 Client_Chat: CMakeFiles/Client_Chat.dir/client/client_main.cc.o
 Client_Chat: CMakeFiles/Client_Chat.dir/portal.cc.o
+Client_Chat: CMakeFiles/Client_Chat.dir/client/gui.cc.o
+Client_Chat: CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o
 Client_Chat: CMakeFiles/Client_Chat.dir/build.make
+Client_Chat: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/QtWidgets
+Client_Chat: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtGui.framework/QtGui
+Client_Chat: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/QtCore
 Client_Chat: CMakeFiles/Client_Chat.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Client_Chat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Client_Chat"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client_Chat.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

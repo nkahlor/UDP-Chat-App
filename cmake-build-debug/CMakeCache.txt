@@ -141,6 +141,9 @@ CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
 // inside the indicated SDK.
 CMAKE_OSX_SYSROOT:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk
 
+//No help, variable specified on the command line.
+CMAKE_PREFIX_PATH:UNINITIALIZED=/Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/cmake
+
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=Client_Server_Chat
 
@@ -211,6 +214,15 @@ Client_Server_Chat_SOURCE_DIR:STATIC=/Users/nickkahlor/CLionProjects/Client-Serv
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
+
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=/Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=/Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=/Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/cmake/Qt5Widgets
 
 
 ########################

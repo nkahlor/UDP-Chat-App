@@ -19,16 +19,19 @@ std::string Portal::receiveMessageRaw() {
                         &len);                             // length of client address structure
 
     if (recv_len <= 0) {
-        printf("recvfrom() error: %s.\n", strerror(errno));
+       // printf("recvfrom() error: %s.\n", strerror(errno));
+        return "";
     }
 
     std::string message(buf);
+    std::cout << "Received: " << message << std::endl;
     return message;
 }
 
 bool Portal::sendMessageRaw(std::string message) {
     ssize_t sent_len;
     char buf[MESSAGE_SIZE];
+    std::cout << "Sending: " << message << std::endl;
     for(unsigned long i = 0; i < message.size(); i++)
         buf[i] = message.at(i);
     for(unsigned long i = message.size(); i < MESSAGE_SIZE; i++)
@@ -49,6 +52,7 @@ bool Portal::sendMessageRaw(std::string message) {
 }
 
 bool Portal::validPreamble(std::string mesg) {
+
     return true;
 }
 

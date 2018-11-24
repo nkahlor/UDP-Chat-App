@@ -7,38 +7,57 @@
 /* =========================================================
  *  Chat Tab
  * ========================================================= */
-ChatTab::ChatTab(QWidget *parent, ClientPortal *client) {
-    this->client = *client;
-
+ChatTab::ChatTab(QWidget *parent, QString tab_name) : QWidget(parent) {
     QVBoxLayout *center = new QVBoxLayout();
     messages = new QListWidget();
+    messages->setStyleSheet("QListWidget { color: black; }");
 
     center->addWidget(messages);
+
+    this->tab_name = tab_name;
 
     setLayout(center);
 }
 
 /* =========================================================
+ *  Message Tabs
+ * ========================================================= */
+MessageTabs::MessageTabs(QWidget *parent) : QTabWidget(parent) {
+
+}
+
+void MessageTabs::addTab(std::string tab_name) {
+    ChatTab *newTab = new ChatTab(nullptr, QString::fromStdString(tab_name));
+    this->chat_tabs.push_back(newTab);
+    this->clear();
+    for(ChatTab *tab : chat_tabs)
+        QTabWidget::addTab(tab, tab->tab_name);
+}
+
+void MessageTabs::addMessage(std::string message, int tab_indx) {
+    // Update the listwidget associated with the tab_index
+    this->chat_tabs[tab_indx]->messages->addItem(QString::fromStdString(message));
+}
+
+
+/* =========================================================
  *  Layout
  * ========================================================= */
-Layout::Layout(QWidget *parent, ClientPortal* client_ptr)  : QWidget(parent) {
-    this->client = *client_ptr;
+Layout::Layout(QWidget *parent)  : QWidget(parent) {
+    login = new LoginDialog(nullptr);
+    this->client = ClientPortal::getInstance();
     QGridLayout *main = new QGridLayout();
     QHBoxLayout *bottom = new QHBoxLayout();
-
-    tabs = new QTabWidget();
 
     QPushButton *logout_btn = new QPushButton("Logout");
     QPushButton *send_btn = new QPushButton("Send");
 
     new_message = new QLineEdit(this);
-    ChatTab* serverTab = new ChatTab(nullptr, client_ptr);
-    ChatTab* allTab = new ChatTab(nullptr, client_ptr);
-    this->chat_tabs.push_back(serverTab);
-    this->chat_tabs.push_back(allTab);
 
-    tabs->addTab(serverTab, "Server");
-    tabs->addTab(allTab, "All");
+    tabs = new MessageTabs();
+
+    tabs->addTab("Server");
+    tabs->addTab("All");
 
     new_message->setStyleSheet("QLineEdit { color: black; }");
 
@@ -55,24 +74,31 @@ Layout::Layout(QWidget *parent, ClientPortal* client_ptr)  : QWidget(parent) {
     QObject::connect(logout_btn, &QPushButton::clicked,
                      this, &Layout::logout_slot);
 
+    login->resize(400, 150);
+    login->setWindowTitle("Login To Server");
+    login->setModal(true);
+    login->show();
+
     setLayout(main);
 }
 
 void Layout::send_message_slot() {
-    std::cout << "Attempting transmission to " << tabs->tabText(tabs->currentIndex()).toUtf8().constData() << std::endl;
-
+    std::string dest = tabs->tabText(tabs->currentIndex()).toUtf8().constData();
+    std::cout << "Attempting transmission to " <<  dest << std::endl;
+    client->sendMessage(new_message->text().toUtf8().constData(), dest);
 }
 
 void Layout::logout_slot() {
     std::cout << "Logging user out\n";
-    client.logoutOfServer();
+    client->logoutOfServer();
+    QWidget::close();
 }
 
 /* =========================================================
  *  Login Dialog
  * ========================================================= */
-LoginDialog::LoginDialog(QWidget *parent, ClientPortal* client_ptr) : QDialog(parent) {
-        this->client = *client_ptr;
+LoginDialog::LoginDialog(QWidget *parent) : QDialog(parent) {
+        this->client = ClientPortal::getInstance();
         QFormLayout *login_form = new QFormLayout();
         QLabel *user = new QLabel("Username");
         QLabel *pass = new QLabel("Password");
@@ -101,8 +127,8 @@ LoginDialog::LoginDialog(QWidget *parent, ClientPortal* client_ptr) : QDialog(pa
 }
 
 void LoginDialog::login_btn_slot() {
-    if(client.loginToServer(user_entry->text().toUtf8().constData(), pass_entry->text().toUtf8().constData(), "120.0.0.1", "22"))
-        this->close();
+    if(client->loginToServer(user_entry->text().toUtf8().constData(), pass_entry->text().toUtf8().constData(), "120.0.0.1", "22"))
+        QWidget::close();
     else
         err->setText("Invalid username or password");
 }

@@ -136,6 +136,86 @@ Server_Chat/fast:
 	$(MAKE) -f CMakeFiles/Server_Chat.dir/build.make CMakeFiles/Server_Chat.dir/build
 .PHONY : Server_Chat/fast
 
+#=============================================================================
+# Target rules for targets named Client_Chat_autogen
+
+# Build rule for target.
+Client_Chat_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Client_Chat_autogen
+.PHONY : Client_Chat_autogen
+
+# fast build rule for target.
+Client_Chat_autogen/fast:
+	$(MAKE) -f CMakeFiles/Client_Chat_autogen.dir/build.make CMakeFiles/Client_Chat_autogen.dir/build
+.PHONY : Client_Chat_autogen/fast
+
+#=============================================================================
+# Target rules for targets named Server_Chat_autogen
+
+# Build rule for target.
+Server_Chat_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Server_Chat_autogen
+.PHONY : Server_Chat_autogen
+
+# fast build rule for target.
+Server_Chat_autogen/fast:
+	$(MAKE) -f CMakeFiles/Server_Chat_autogen.dir/build.make CMakeFiles/Server_Chat_autogen.dir/build
+.PHONY : Server_Chat_autogen/fast
+
+Client_Chat_autogen/mocs_compilation.o: Client_Chat_autogen/mocs_compilation.cpp.o
+
+.PHONY : Client_Chat_autogen/mocs_compilation.o
+
+# target to build an object file
+Client_Chat_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/Client_Chat.dir/build.make CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o
+.PHONY : Client_Chat_autogen/mocs_compilation.cpp.o
+
+Client_Chat_autogen/mocs_compilation.i: Client_Chat_autogen/mocs_compilation.cpp.i
+
+.PHONY : Client_Chat_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+Client_Chat_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/Client_Chat.dir/build.make CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.i
+.PHONY : Client_Chat_autogen/mocs_compilation.cpp.i
+
+Client_Chat_autogen/mocs_compilation.s: Client_Chat_autogen/mocs_compilation.cpp.s
+
+.PHONY : Client_Chat_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+Client_Chat_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/Client_Chat.dir/build.make CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.s
+.PHONY : Client_Chat_autogen/mocs_compilation.cpp.s
+
+Server_Chat_autogen/mocs_compilation.o: Server_Chat_autogen/mocs_compilation.cpp.o
+
+.PHONY : Server_Chat_autogen/mocs_compilation.o
+
+# target to build an object file
+Server_Chat_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Chat.dir/build.make CMakeFiles/Server_Chat.dir/Server_Chat_autogen/mocs_compilation.cpp.o
+.PHONY : Server_Chat_autogen/mocs_compilation.cpp.o
+
+Server_Chat_autogen/mocs_compilation.i: Server_Chat_autogen/mocs_compilation.cpp.i
+
+.PHONY : Server_Chat_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+Server_Chat_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Chat.dir/build.make CMakeFiles/Server_Chat.dir/Server_Chat_autogen/mocs_compilation.cpp.i
+.PHONY : Server_Chat_autogen/mocs_compilation.cpp.i
+
+Server_Chat_autogen/mocs_compilation.s: Server_Chat_autogen/mocs_compilation.cpp.s
+
+.PHONY : Server_Chat_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+Server_Chat_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Chat.dir/build.make CMakeFiles/Server_Chat.dir/Server_Chat_autogen/mocs_compilation.cpp.s
+.PHONY : Server_Chat_autogen/mocs_compilation.cpp.s
+
 client/client_main.o: client/client_main.cc.o
 
 .PHONY : client/client_main.o
@@ -162,6 +242,33 @@ client/client_main.s: client/client_main.cc.s
 client/client_main.cc.s:
 	$(MAKE) -f CMakeFiles/Client_Chat.dir/build.make CMakeFiles/Client_Chat.dir/client/client_main.cc.s
 .PHONY : client/client_main.cc.s
+
+client/gui.o: client/gui.cc.o
+
+.PHONY : client/gui.o
+
+# target to build an object file
+client/gui.cc.o:
+	$(MAKE) -f CMakeFiles/Client_Chat.dir/build.make CMakeFiles/Client_Chat.dir/client/gui.cc.o
+.PHONY : client/gui.cc.o
+
+client/gui.i: client/gui.cc.i
+
+.PHONY : client/gui.i
+
+# target to preprocess a source file
+client/gui.cc.i:
+	$(MAKE) -f CMakeFiles/Client_Chat.dir/build.make CMakeFiles/Client_Chat.dir/client/gui.cc.i
+.PHONY : client/gui.cc.i
+
+client/gui.s: client/gui.cc.s
+
+.PHONY : client/gui.s
+
+# target to generate assembly for a file
+client/gui.cc.s:
+	$(MAKE) -f CMakeFiles/Client_Chat.dir/build.make CMakeFiles/Client_Chat.dir/client/gui.cc.s
+.PHONY : client/gui.cc.s
 
 client/udp_client_portal.o: client/udp_client_portal.cc.o
 
@@ -311,9 +418,20 @@ help:
 	@echo "... edit_cache"
 	@echo "... Client_Chat"
 	@echo "... Server_Chat"
+	@echo "... Client_Chat_autogen"
+	@echo "... Server_Chat_autogen"
+	@echo "... Client_Chat_autogen/mocs_compilation.o"
+	@echo "... Client_Chat_autogen/mocs_compilation.i"
+	@echo "... Client_Chat_autogen/mocs_compilation.s"
+	@echo "... Server_Chat_autogen/mocs_compilation.o"
+	@echo "... Server_Chat_autogen/mocs_compilation.i"
+	@echo "... Server_Chat_autogen/mocs_compilation.s"
 	@echo "... client/client_main.o"
 	@echo "... client/client_main.i"
 	@echo "... client/client_main.s"
+	@echo "... client/gui.o"
+	@echo "... client/gui.i"
+	@echo "... client/gui.s"
 	@echo "... client/udp_client_portal.o"
 	@echo "... client/udp_client_portal.i"
 	@echo "... client/udp_client_portal.s"

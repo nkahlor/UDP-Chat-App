@@ -1,4 +1,0 @@
-client_a
-password1
-120.0.0.1
-32000

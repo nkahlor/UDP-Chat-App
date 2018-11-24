@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/Server_Chat_autogen/mocs_compilation.cpp" "/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles/Server_Chat.dir/Server_Chat_autogen/mocs_compilation.cpp.o"
   "/Users/nickkahlor/CLionProjects/Client-Server Chat/portal.cc" "/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles/Server_Chat.dir/portal.cc.o"
   "/Users/nickkahlor/CLionProjects/Client-Server Chat/server/server_main.cc" "/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles/Server_Chat.dir/server/server_main.cc.o"
   "/Users/nickkahlor/CLionProjects/Client-Server Chat/server/udp_server_portal.cc" "/Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug/CMakeFiles/Server_Chat.dir/server/udp_server_portal.cc.o"
@@ -13,6 +14,7 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "Server_Chat_autogen/include"
   )
 
 # Targets to which this target links.

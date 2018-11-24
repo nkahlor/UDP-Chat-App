@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/nickkahlor/CLionProjects/Client-Server Chat"
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/cmake -G "CodeBlocks - Unix Makefiles" "/Users/nickkahlor/CLionProjects/Client-Server Chat"
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/nickkahlor/CLionProjects/Client-Server Chat/cmake-build-debug

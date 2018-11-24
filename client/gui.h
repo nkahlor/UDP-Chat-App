@@ -19,43 +19,53 @@
 #include "udp_client_portal.h"
 
 class ChatTab : public QWidget {
+Q_OBJECT;
 public:
-    ClientPortal client;
+    QString tab_name;
     QListWidget *messages;
-    ChatTab(QWidget *parent = nullptr, ClientPortal *client = nullptr);
+    ChatTab(QWidget *parent, QString tab_name);
+};
 
+class MessageTabs : public QTabWidget {
+Q_OBJECT;
+public:
+    MessageTabs(QWidget* parent = nullptr);
+    void addMessage(std::string message, int tab_indx);
+    void addTab(std::string tab_name);
+
+private:
+    QVector<ChatTab*> chat_tabs;
+};
+
+class LoginDialog : public QDialog {
+Q_OBJECT
+public:
+    QLineEdit *pass_entry;
+    QLineEdit *user_entry;
+    QLabel *err;
+    ClientPortal *client;
+
+    LoginDialog(QWidget*);
+    virtual ~LoginDialog() = default;
+
+public slots:
+    void login_btn_slot();
 };
 
 class Layout : public QWidget {
-    Q_OBJECT;
+Q_OBJECT;
 public:
-    ClientPortal client;
     QLineEdit *new_message;
-    QTabWidget *tabs;
+    MessageTabs *tabs;
+    LoginDialog *login;
+    ClientPortal *client;
 
-    QVector<ChatTab*> chat_tabs;
-
-    Layout(QWidget* parent = nullptr, ClientPortal* client = nullptr);
+    Layout(QWidget*);
     virtual ~Layout() = default;
 
 public slots:
     void send_message_slot();
     void logout_slot();
-};
-
-class LoginDialog : public QDialog {
-    Q_OBJECT
-    ClientPortal client;
-public:
-    QLineEdit *pass_entry;
-    QLineEdit *user_entry;
-    QLabel *err;
-
-    LoginDialog(QWidget *parent = nullptr, ClientPortal* client = nullptr);
-    virtual ~LoginDialog() = default;
-
-public slots:
-    void login_btn_slot();
 };
 
 #endif //CLIENT_SERVER_CHAT_GUI_H
