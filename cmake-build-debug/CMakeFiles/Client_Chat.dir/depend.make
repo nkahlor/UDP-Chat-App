@@ -6,6 +6,8 @@ CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o: ../client
 CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o: Client_Chat_autogen/7EM65HM6UG/moc_gui.cpp
 CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o: Client_Chat_autogen/mocs_compilation.cpp
 CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o: ../portal.h
+CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/QThread
+CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/qthread.h
 CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/Headers/QApplication
 CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/Headers/QDialog
 CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/Headers/QFormLayout
@@ -29,6 +31,8 @@ CMakeFiles/Client_Chat.dir/client/client_main.cc.o: ../client/client_main.cc
 CMakeFiles/Client_Chat.dir/client/client_main.cc.o: ../client/gui.h
 CMakeFiles/Client_Chat.dir/client/client_main.cc.o: ../client/udp_client_portal.h
 CMakeFiles/Client_Chat.dir/client/client_main.cc.o: ../portal.h
+CMakeFiles/Client_Chat.dir/client/client_main.cc.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/QThread
+CMakeFiles/Client_Chat.dir/client/client_main.cc.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/qthread.h
 CMakeFiles/Client_Chat.dir/client/client_main.cc.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/Headers/QApplication
 CMakeFiles/Client_Chat.dir/client/client_main.cc.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/Headers/QDialog
 CMakeFiles/Client_Chat.dir/client/client_main.cc.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/Headers/QFormLayout
@@ -52,6 +56,8 @@ CMakeFiles/Client_Chat.dir/client/gui.cc.o: ../client/gui.cc
 CMakeFiles/Client_Chat.dir/client/gui.cc.o: ../client/gui.h
 CMakeFiles/Client_Chat.dir/client/gui.cc.o: ../client/udp_client_portal.h
 CMakeFiles/Client_Chat.dir/client/gui.cc.o: ../portal.h
+CMakeFiles/Client_Chat.dir/client/gui.cc.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/QThread
+CMakeFiles/Client_Chat.dir/client/gui.cc.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/qthread.h
 CMakeFiles/Client_Chat.dir/client/gui.cc.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/Headers/QApplication
 CMakeFiles/Client_Chat.dir/client/gui.cc.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/Headers/QDialog
 CMakeFiles/Client_Chat.dir/client/gui.cc.o: /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/Headers/QFormLayout

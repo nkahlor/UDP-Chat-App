@@ -30,11 +30,9 @@ private:
     bool _log_user_out(std::string mesg);;
     std::string _generate_token();
     bool _valid_token(std::string tok);
-    char _generate_char();
-    std::string _generate_msg_id();
     bool _route_message(std::string mesg);
-    bool _send_message_to_usr(std::string mesg, User usr);
-
+    bool _forward_message_to_usr(std::string mesg, User src, User dest);
+    bool _report_to_sender(std::string mesg, User sender);
 
 public:
     ServerPortal();

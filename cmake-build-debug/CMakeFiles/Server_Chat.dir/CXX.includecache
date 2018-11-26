@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/nickkahlor/CLionProjects/Client-Server Chat/portal.cc
+portal.h
+/Users/nickkahlor/CLionProjects/Client-Server Chat/portal.h
+
 /Users/nickkahlor/CLionProjects/Client-Server Chat/portal.h
 string
 -
@@ -28,47 +32,5 @@ netinet/in.h
 arpa/inet.h
 -
 iostream
--
-
-/Users/nickkahlor/CLionProjects/Client-Server Chat/server/udp_server_portal.cc
-udp_server_portal.h
-/Users/nickkahlor/CLionProjects/Client-Server Chat/server/udp_server_portal.h
-
-/Users/nickkahlor/CLionProjects/Client-Server Chat/server/udp_server_portal.h
-vector
--
-map
--
-fstream
--
-iostream
--
-stdexcept
--
-pthread.h
--
-user.h
-/Users/nickkahlor/CLionProjects/Client-Server Chat/server/user.h
-../portal.h
-/Users/nickkahlor/CLionProjects/Client-Server Chat/portal.h
-
-/Users/nickkahlor/CLionProjects/Client-Server Chat/server/user.h
-string
--
-arpa/inet.h
--
-netinet/in.h
--
-stdio.h
--
-sys/types.h
--
-sys/socket.h
--
-unistd.h
--
-stdlib.h
--
-string.h
 -
 

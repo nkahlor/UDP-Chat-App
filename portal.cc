@@ -4,7 +4,7 @@
 #include "portal.h"
 
 Portal::Portal() {
-
+    srand((unsigned int)time(nullptr));
 }
 
 std::string Portal::receiveMessageRaw() {
@@ -63,4 +63,17 @@ void Portal::close() {
 
 bool Portal::isConnected() {
     return connected;
+}
+
+char Portal::_generate_char() {
+    auto random_char = (unsigned char)(rand() % (126 - 33 + 1) + 33);
+    return static_cast<char>(random_char);
+}
+
+std::string Portal::_generate_msg_id() {
+    const int ID_LEN = 10;
+    std::string id;
+    for(int i = 0; i < ID_LEN; i++)
+        id += _generate_char();
+    return id;
 }

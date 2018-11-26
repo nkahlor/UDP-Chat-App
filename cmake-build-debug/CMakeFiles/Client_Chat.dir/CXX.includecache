@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/nickkahlor/CLionProjects/Client-Server Chat/client/client_main.cc
-iostream
--
-pthread.h
--
-gui.h
-/Users/nickkahlor/CLionProjects/Client-Server Chat/client/gui.h
-
 /Users/nickkahlor/CLionProjects/Client-Server Chat/client/gui.cc
 gui.h
 /Users/nickkahlor/CLionProjects/Client-Server Chat/client/gui.h
@@ -36,6 +28,8 @@ QDialog
 QLabel
 -
 QFormLayout
+-
+QThread
 -
 iostream
 -
@@ -70,6 +64,20 @@ netinet/in.h
 arpa/inet.h
 -
 iostream
+-
+
+/Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/QThread
+qthread.h
+/Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/qthread.h
+
+/Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/qthread.h
+QtCore/qobject.h
+-
+future
+-
+functional
+-
+limits.h
 -
 
 /Users/nickkahlor/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/Headers/QApplication

@@ -117,8 +117,31 @@ bool ServerPortal::_log_user_in(std::string mesg) {
             }
         }
     }
-    if(!validUser)
+    if(!validUser) {
         sendMessageRaw("Error: Unregistered username");
+    }
+    // Broadcast the presence of a new user to all currently logged in users
+    else {
+        std::string msg_id = _generate_msg_id();
+        // Back up the address of the person who logged in
+        struct sockaddr_in tmp = remote_addr;
+        for(auto const& itr : logged_in) {
+            // If the the iterator points to a user besides the one who just logged on, notify them of a new user
+            if(itr.second.getUsername() != username) {
+                std::string broadcast_mesg = "server->" + itr.second.getUsername() + "#" + "NewUser: " + username;
+                remote_addr = itr.second.getAddress();
+                sendMessageRaw(broadcast_mesg);
+            }
+            // Let the new guy know who's already logged in
+            if(itr.second.getUsername() != username) {
+                std::string broadcast_mesg = "server->" + username + "#" + "NewUser: " + itr.second.getUsername();
+                remote_addr = tmp; // Send to the person who logged in
+                sendMessageRaw(broadcast_mesg);
+            }
+        }
+        // Restore the address
+        remote_addr = tmp;
+    }
 
     return validUser;
 }
@@ -174,7 +197,7 @@ bool ServerPortal::_route_message(std::string mesg) {
 
     // Verify the sender's Token
     if(!_valid_token(tok)) {
-        sendMessageRaw("Error: Could not authenticate sender, message not sent");
+        _report_to_sender("Error: Could not authenticate sender, message not sent", logged_in[sender]);
         return false;
     }
 
@@ -183,34 +206,47 @@ bool ServerPortal::_route_message(std::string mesg) {
     std::string port;
     bool valid_dest = logged_in.count(dest) > 0;
     if(!valid_dest) {
-        sendMessageRaw("Error: Sending failed, user not logged in");
+        _report_to_sender("Error: Sending failed, user not logged in", logged_in[sender]);
         return false;
     }
 
-    std::string full_mesg = sender + "->" + dest + "#<" + logged_in[dest].getToken() + ">" + sender + ": " + message;
+    std::string full_mesg = sender + "->" + dest + "#<" + logged_in[dest].getToken() + ">"  +
+            "<" + _generate_msg_id() + ">" +
+            sender + ": " + message;
     // Send the message if the user is logged in
-    if(!_send_message_to_usr(full_mesg, logged_in[dest])) {
-        sendMessageRaw("Error: Message failed to send");
+    if(!_forward_message_to_usr(full_mesg, logged_in[sender], logged_in[dest])) {
+        _report_to_sender("Error: Message failed to send", logged_in[sender]);
         return false;
     }
     // Let the sender know it was successfully sent
-    std::string echo = "server->" + sender + "# "+
-                        "<" + logged_in[sender].getToken() + ">" + "<" + msg_id + ">" +
-                        "Success: " + message;
+    std::string echo = "Success: " + message;
 
     remote_addr = logged_in[sender].getAddress();
-    sendMessageRaw(echo);
+    _report_to_sender(echo, logged_in[sender]);
     // Store the message and messageID
     logfile << "[" << msg_id << "]" << sender << "->" << dest << ": " << message << "\n";
     logfile.flush();
     return true;
 }
 
-bool ServerPortal::_send_message_to_usr(std::string mesg, User usr) {
+bool ServerPortal::_report_to_sender(std::string mesg, User sender) {
+    std::string full_mesg = "server->" + sender.getUsername() + "#<" + logged_in[sender.getUsername()].getToken() +
+                            ">" + "<" + _generate_msg_id() + ">" + mesg;
+    sendMessageRaw(full_mesg);
+}
+
+bool ServerPortal::_forward_message_to_usr(std::string mesg, User src, User dest) {
+    std::string full_mesg = src.getUsername() + "->" + dest.getUsername() + "#<" + logged_in[dest.getUsername()].getToken() +
+                            ">" + "<" + _generate_msg_id()
+                            + ">" + mesg;
+    struct sockaddr_in sender_addr = remote_addr;
     // Set the remote_addr
-    remote_addr = usr.getAddress();
+    remote_addr = dest.getAddress();
     // Send the message itself
-    return sendMessageRaw(mesg);
+    bool success = sendMessageRaw(mesg);
+    // Restore the previous sender's address to echo messages properly
+    remote_addr = sender_addr;
+    return success;
 }
 
 // TODO: Ensure no duplicate tokens in the program are created, it's not likely but it is possible
@@ -222,14 +258,6 @@ std::string ServerPortal::_generate_token() {
     return token;
 }
 
-std::string ServerPortal::_generate_msg_id() {
-    const int ID_LEN = 10;
-    std::string id;
-    for(int i = 0; i < ID_LEN; i++)
-        id += _generate_char();
-    return id;
-}
-
 bool ServerPortal::_valid_token(std::string tok) {
     for(const User& u : users) {
         if(u.getToken().find(tok) != std::string::npos) // if the token is found in any user, return true
@@ -237,12 +265,6 @@ bool ServerPortal::_valid_token(std::string tok) {
     }
     // if we never found the token, it must be invalid
     return false;
-}
-
-char ServerPortal::_generate_char() {
-    //srand((unsigned int)time(nullptr));
-    auto random_char = (unsigned char)(rand() % (126 - 33 + 1) + 33);
-    return static_cast<char>(random_char);
 }
 
 // TODO: Send a message to the user you're booting

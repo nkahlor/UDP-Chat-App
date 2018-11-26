@@ -9,12 +9,13 @@ class ClientPortal : public Portal {
 private:
     std::string token;
     std::string user;
-    std::string pass;
+public:
+    const std::string &getUser() const;
+
+private:
 
     static ClientPortal* __instance;
 
-    std::string _generate_msg_id();
-    char _generate_char();
 public:
     ClientPortal();
     static ClientPortal* getInstance();

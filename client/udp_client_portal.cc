@@ -33,7 +33,6 @@ bool ClientPortal::loginToServer(std::string user, std::string pass, std::string
         return false;
     } else {
         this->user = user;
-        this->pass = pass;
         return true;
     }
 }
@@ -48,16 +47,6 @@ void ClientPortal::logoutOfServer() {
     sendMessageRaw(message);
 }
 
-std::string ClientPortal::_generate_msg_id() {
-    const int ID_LEN = 10;
-    std::string id = "";
-    for(int i = 0; i < ID_LEN; i++)
-        id += _generate_char();
-    return id;
-}
-
-char ClientPortal::_generate_char() {
-    //srand((unsigned int)time(nullptr));
-    unsigned char random_char = rand() % (126 - 33 + 1) + 33;
-    return static_cast<char>(random_char);
+const std::string &ClientPortal::getUser() const {
+    return user;
 }

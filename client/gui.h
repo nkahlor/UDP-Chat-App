@@ -14,9 +14,24 @@
 #include <QDialog>
 #include <QLabel>
 #include <QFormLayout>
+#include <QThread>
 
 #include <iostream>
 #include "udp_client_portal.h"
+
+class Receiver : public QThread {
+Q_OBJECT;
+public:
+    explicit Receiver(QObject *parent = nullptr) : QThread(parent) {}
+
+public slots:
+    void run() override;
+private:
+    void _parse_message(const std::string& mesg);
+    signals:
+    void requestNewTab(const QString& name);
+    void requestNewMessage(const QString& message,  const QString& sender);
+};
 
 class ChatTab : public QWidget {
 Q_OBJECT;
@@ -32,6 +47,7 @@ public:
     MessageTabs(QWidget* parent = nullptr);
     void addMessage(std::string message, int tab_indx);
     void addTab(std::string tab_name);
+    int findTab(std::string tab_name);
 
 private:
     QVector<ChatTab*> chat_tabs;
@@ -60,12 +76,16 @@ public:
     LoginDialog *login;
     ClientPortal *client;
 
+    Receiver *thread;
+
     Layout(QWidget*);
     virtual ~Layout() = default;
 
 public slots:
     void send_message_slot();
     void logout_slot();
+    void createNewTab(const QString& name);
+    void addNewMessage(const QString& message,  const QString& sender);
 };
 
 #endif //CLIENT_SERVER_CHAT_GUI_H

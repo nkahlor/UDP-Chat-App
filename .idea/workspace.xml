@@ -16,64 +16,30 @@
   <component name="ChangeListManager">
     <list default="true" id="15280efe-4828-42c3-9fcf-bbdac302a005" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/client_main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/client/client_main.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/gui.cc" beforeDir="false" afterPath="$PROJECT_DIR$/client/gui.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/gui.h" beforeDir="false" afterPath="$PROJECT_DIR$/client/gui.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/udp_client_portal.cc" beforeDir="false" afterPath="$PROJECT_DIR$/client/udp_client_portal.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/udp_client_portal.h" beforeDir="false" afterPath="$PROJECT_DIR$/client/udp_client_portal.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client1_input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client2_input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/Client_Chat_autogen/mocs_compilation.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/client/client_main.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/client/client_main.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/client/gui.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/client/gui.cc.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/client/udp_client_portal.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/client/udp_client_portal.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/portal.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/portal.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Chat.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Server_Chat.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Server_Chat.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Server_Chat.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Server_Chat.dir/client/udp_client.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Server_Chat.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Server_Chat.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Server_Chat.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Server_Chat.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Server_Chat.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Server_Chat.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client_Server_Chat.dir/server/udp_server.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/portal.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/portal.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/server/server_main.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/server/server_main.cc.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/server/udp_server_portal.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server_Chat.dir/server/udp_server_portal.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Client_Chat" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Client_Chat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Client_Server_Chat.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Client_Server_Chat.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Client_Chat_autogen/7EM65HM6UG/moc_gui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Client_Chat_autogen/7EM65HM6UG/moc_gui.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Server_Chat" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Server_Chat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal.cc" beforeDir="false" afterPath="$PROJECT_DIR$/portal.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal.h" beforeDir="false" afterPath="$PROJECT_DIR$/portal.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/udp_server_portal.cc" beforeDir="false" afterPath="$PROJECT_DIR$/server/udp_server_portal.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/udp_server_portal.h" beforeDir="false" afterPath="$PROJECT_DIR$/server/udp_server_portal.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,9 +63,9 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="__tree" value="2" />
-          <entry key="cc" value="46" />
-          <entry key="h" value="36" />
-          <entry key="log" value="7" />
+          <entry key="cc" value="49" />
+          <entry key="h" value="45" />
+          <entry key="log" value="8" />
           <entry key="map" value="1" />
           <entry key="string" value="4" />
           <entry key="tuple" value="1" />
@@ -109,21 +75,21 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="5" />
-          <entry key="ObjectiveC" value="90" />
-          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="ObjectiveC" value="102" />
+          <entry key="PLAIN_TEXT" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cc" value="19579" />
-          <entry key="h" value="3787" />
+          <entry key="cc" value="25795" />
+          <entry key="h" value="4837" />
           <entry key="txt" value="162" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="113" />
-          <entry key="ObjectiveC" value="23366" />
+          <entry key="ObjectiveC" value="30632" />
           <entry key="PLAIN_TEXT" value="49" />
         </counts>
       </usages-collector>
@@ -134,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/udp_client_portal.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="150">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="21" />
               <folding>
                 <element signature="e#87#106#0" expanded="true" />
               </folding>
@@ -144,10 +110,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/udp_client_portal.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="16" />
+              <folding>
+                <element signature="e#32#555#0" />
+                <element signature="e#607#746#0" />
+                <element signature="e#748#1342#0" />
+                <element signature="e#1344#1561#0" />
+                <element signature="e#1563#1708#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/udp_server_portal.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+            <state relative-caret-position="302">
+              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
               <folding>
                 <element signature="e#87#104#0" expanded="true" />
               </folding>
@@ -156,10 +138,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/udp_client_portal.cc">
+        <entry file="file://$PROJECT_DIR$/portal.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="299">
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+              <folding>
+                <element signature="e#122#139#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,13 +152,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/udp_server_portal.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-807">
-              <caret line="121" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="258">
+              <caret line="258" column="1" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
               <folding>
+                <element signature="e#103#1544#0" />
+                <element signature="e#1546#2027#0" />
+                <element signature="e#2029#2414#0" />
+                <element signature="e#2416#4709#0" />
+                <element signature="e#4329#4818#0" />
+                <element signature="e#4820#7395#0" />
+                <element signature="e#7289#7338#0" />
+                <element signature="e#7397#7595#0" />
                 <element signature="e#7597#7887#0" />
-                <element signature="e#7889#8067#0" />
                 <element signature="e#8069#8364#0" />
-                <element signature="e#8366#8560#0" />
                 <element signature="e#8562#9367#0" />
               </folding>
             </state>
@@ -183,8 +174,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/gui.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-919">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="197">
+              <caret line="94" column="55" lean-forward="true" selection-start-line="94" selection-start-column="55" selection-end-line="94" selection-end-column="55" />
+              <folding>
+                <element signature="e#68#1935#0" />
+                <element signature="e#1940#2158#0" />
+                <element signature="e#68#402#0" />
+                <element signature="e#2835#3164#0" />
+                <element signature="e#1204#1259#0" />
+                <element signature="e#4094#5635#0" />
+                <element signature="e#1976#2094#0" />
+                <element signature="e#3272#3324#0" />
+                <element signature="e#5584#5662#0" />
+                <element signature="e#5878#7096#0" />
+                <element signature="e#3186#3436#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -192,22 +196,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/gui.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+            <state relative-caret-position="196">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#117#140#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/client_main.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#382#679#1" />
               </folding>
             </state>
           </provider>
@@ -221,6 +214,8 @@
       <find>addr</find>
       <find>find</find>
       <find>client</find>
+      <find>request</find>
+      <find>setSty</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -241,17 +236,17 @@
         <option value="$PROJECT_DIR$/server/user.h" />
         <option value="$PROJECT_DIR$/server/user.cc" />
         <option value="$PROJECT_DIR$/server/server_main.cc" />
-        <option value="$PROJECT_DIR$/server/udp_server_portal.h" />
         <option value="$PROJECT_DIR$/server/message_parser.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/portal.h" />
-        <option value="$PROJECT_DIR$/portal.cc" />
-        <option value="$PROJECT_DIR$/client/udp_client_portal.h" />
-        <option value="$PROJECT_DIR$/server/udp_server_portal.cc" />
-        <option value="$PROJECT_DIR$/client/udp_client_portal.cc" />
         <option value="$PROJECT_DIR$/client/gui.h" />
-        <option value="$PROJECT_DIR$/client/gui.cc" />
         <option value="$PROJECT_DIR$/client/client_main.cc" />
+        <option value="$PROJECT_DIR$/server/udp_server_portal.h" />
+        <option value="$PROJECT_DIR$/portal.h" />
+        <option value="$PROJECT_DIR$/server/udp_server_portal.cc" />
+        <option value="$PROJECT_DIR$/client/udp_client_portal.h" />
+        <option value="$PROJECT_DIR$/portal.cc" />
+        <option value="$PROJECT_DIR$/client/udp_client_portal.cc" />
+        <option value="$PROJECT_DIR$/client/gui.cc" />
       </list>
     </option>
   </component>
@@ -362,12 +357,12 @@
       <workItem from="1541725751068" duration="5002000" />
       <workItem from="1542133491266" duration="12419000" />
       <workItem from="1542649492098" duration="30738000" />
-      <workItem from="1543088119623" duration="5250000" />
+      <workItem from="1543088119623" duration="18770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53409000" />
+    <option name="totallyTimeSpent" value="66929000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -403,6 +398,28 @@
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1615509" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="CMake" order="0" weight="0.32750398" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32750398" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5048465" side_tool="true" weight="0.2591415" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.4951535" weight="0.2591415" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" x="21" y="305" width="1238" height="190" id="Run" order="7" sideWeight="0.50807756" visible="true" weight="0.2591415" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49434572" weight="0.32114467" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.32750398" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -418,8 +435,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/client/gui.cc</url>
-          <line>129</line>
-          <option name="timeStamp" value="6" />
+          <line>157</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -464,9 +481,6 @@
           <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/archive.log">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/client1_input.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -522,34 +536,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portal.cc">
+    <entry file="file://$USER_HOME$/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/qobject.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        <state relative-caret-position="147">
+          <caret line="238" selection-start-line="238" selection-end-line="238" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/qstring.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="1366" selection-start-line="1366" selection-end-line="1366" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Qt5.11.2/5.11.2/clang_64/lib/QtCore.framework/Headers/qobjectdefs_impl.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="402" selection-start-line="402" selection-end-line="402" />
+        <state relative-caret-position="222">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/archive.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/client_main.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/udp_server_portal.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="258" column="1" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
+          <folding>
+            <element signature="e#103#1544#0" />
+            <element signature="e#1546#2027#0" />
+            <element signature="e#2029#2414#0" />
+            <element signature="e#2416#4709#0" />
+            <element signature="e#4329#4818#0" />
+            <element signature="e#4820#7395#0" />
+            <element signature="e#7289#7338#0" />
+            <element signature="e#7397#7595#0" />
+            <element signature="e#7597#7887#0" />
+            <element signature="e#8069#8364#0" />
+            <element signature="e#8562#9367#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/portal.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state relative-caret-position="299">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
           <folding>
             <element signature="e#122#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/portal.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/udp_server_portal.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        <state relative-caret-position="302">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
           <folding>
             <element signature="e#87#104#0" expanded="true" />
           </folding>
@@ -558,8 +619,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/udp_client_portal.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="150">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="21" />
           <folding>
             <element signature="e#87#106#0" expanded="true" />
           </folding>
@@ -568,49 +629,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/udp_client_portal.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/udp_server_portal.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-807">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="210">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="16" />
           <folding>
-            <element signature="e#7597#7887#0" />
-            <element signature="e#7889#8067#0" />
-            <element signature="e#8069#8364#0" />
-            <element signature="e#8366#8560#0" />
-            <element signature="e#8562#9367#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/client_main.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#32#555#0" />
+            <element signature="e#607#746#0" />
+            <element signature="e#748#1342#0" />
+            <element signature="e#1344#1561#0" />
+            <element signature="e#1563#1708#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/gui.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="196">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#117#140#0" expanded="true" />
+            <element signature="e#382#679#1" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Qt5.11.2/5.11.2/clang_64/lib/QtWidgets.framework/Headers/qlistwidget.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/gui.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-919">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="197">
+          <caret line="94" column="55" lean-forward="true" selection-start-line="94" selection-start-column="55" selection-end-line="94" selection-end-column="55" />
+          <folding>
+            <element signature="e#68#1935#0" />
+            <element signature="e#1940#2158#0" />
+            <element signature="e#68#402#0" />
+            <element signature="e#2835#3164#0" />
+            <element signature="e#1204#1259#0" />
+            <element signature="e#4094#5635#0" />
+            <element signature="e#1976#2094#0" />
+            <element signature="e#3272#3324#0" />
+            <element signature="e#5584#5662#0" />
+            <element signature="e#5878#7096#0" />
+            <element signature="e#3186#3436#0" />
+          </folding>
         </state>
       </provider>
     </entry>

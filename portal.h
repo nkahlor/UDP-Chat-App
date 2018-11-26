@@ -25,6 +25,8 @@ protected:
     int sockfd;
     socklen_t len;
     bool connected;
+    char _generate_char();
+    std::string _generate_msg_id();
 
 public:
     Portal();
